@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Rover" Class="RoverDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=rover2012.mssql.somee.com;Initial Catalog=rover2012;Persist Security Info=True;User ID=lepusoft" SettingsObjectName="slnRoverDatos.Properties.Settings" SettingsPropertyName="RoverConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Carritos" Member="Carritos">
+    <Type Name="Carritos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="Carritos_Ordenes" Member="Ordenes" ThisKey="Id" OtherKey="IdCarrito" Type="Ordenes" />
+      <Association Name="Carritos_DetalleCarrito" Member="DetalleCarrito" ThisKey="Id" OtherKey="IdCarrito" Type="DetalleCarrito" />
+      <Association Name="Usuarios_Carritos" Member="Usuarios" ThisKey="IdUsuario" OtherKey="Id" Type="Usuarios" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Zonas" Member="Zonas">
+    <Type Name="Zonas">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Zonas_Ordenes" Member="Ordenes" ThisKey="Id" OtherKey="IdZona" Type="Ordenes" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categorias" Member="Categorias">
+    <Type Name="Categorias">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Categorias_Repuestos" Member="Repuestos" ThisKey="Id" OtherKey="IdCategoria" Type="Repuestos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Combustibles" Member="Combustibles">
+    <Type Name="Combustibles">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Combustibles_VehiculoUsuario" Member="VehiculoUsuario" ThisKey="Id" OtherKey="IdCombustible" Type="VehiculoUsuario" />
+      <Association Name="Combustibles_Repuestos" Member="Repuestos" ThisKey="Id" OtherKey="IdCombustible" Type="Repuestos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Configuraciones" Member="Configuraciones">
+    <Type Name="Configuraciones">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Clave" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetalleUsuario" Member="DetalleUsuario">
+    <Type Name="DetalleUsuario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Usuarios_DetalleUsuario" Member="Usuarios" ThisKey="Id" OtherKey="Id" Type="Usuarios" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fotos" Member="Fotos">
+    <Type Name="Fotos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdRepuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UrlFoto" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Repuestos_Fotos" Member="Repuestos" ThisKey="IdRepuesto" OtherKey="Id" Type="Repuestos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Modelos" Member="Modelos">
+    <Type Name="Modelos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RangoA_os" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Association Name="Modelos_TipoModelo" Member="TipoModelo" ThisKey="Id" OtherKey="IdModelo" Type="TipoModelo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Monedas" Member="Monedas">
+    <Type Name="Monedas">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Simbolo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ordenes" Member="Ordenes">
+    <Type Name="Ordenes">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTipoPago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCarrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdZona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Procesada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Carritos_Ordenes" Member="Carritos" ThisKey="IdCarrito" OtherKey="Id" Type="Carritos" IsForeignKey="true" />
+      <Association Name="Zonas_Ordenes" Member="Zonas" ThisKey="IdZona" OtherKey="Id" Type="Zonas" IsForeignKey="true" />
+      <Association Name="TipoPagos_Ordenes" Member="TipoPagos" ThisKey="IdTipoPago" OtherKey="Id" Type="TipoPagos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RepuestosPorTipoDeModelo" Member="RepuestosPorTipoDeModelo">
+    <Type Name="RepuestosPorTipoDeModelo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdRepuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TipoModelo_RepuestosPorTipoDeModelo" Member="TipoModelo" ThisKey="IdTipoModelo" OtherKey="Id" Type="TipoModelo" IsForeignKey="true" />
+      <Association Name="Repuestos_RepuestosPorTipoDeModelo" Member="Repuestos" ThisKey="IdRepuesto" OtherKey="Id" Type="Repuestos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoModelo" Member="TipoModelo">
+    <Type Name="TipoModelo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TipoModelo_RepuestosPorTipoDeModelo" Member="RepuestosPorTipoDeModelo" ThisKey="Id" OtherKey="IdTipoModelo" Type="RepuestosPorTipoDeModelo" />
+      <Association Name="TipoModelo_VehiculoUsuario" Member="VehiculoUsuario" ThisKey="Id" OtherKey="IdTipoModelo" Type="VehiculoUsuario" />
+      <Association Name="Modelos_TipoModelo" Member="Modelos" ThisKey="IdModelo" OtherKey="Id" Type="Modelos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TipoPagos" Member="TipoPagos">
+    <Type Name="TipoPagos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoPagos_Ordenes" Member="Ordenes" ThisKey="Id" OtherKey="IdTipoPago" Type="Ordenes" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehiculoUsuario" Member="VehiculoUsuario">
+    <Type Name="VehiculoUsuario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdTipoModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="A_o" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VIN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdCombustible" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Combustibles_VehiculoUsuario" Member="Combustibles" ThisKey="IdCombustible" OtherKey="Id" Type="Combustibles" IsForeignKey="true" />
+      <Association Name="TipoModelo_VehiculoUsuario" Member="TipoModelo" ThisKey="IdTipoModelo" OtherKey="Id" Type="TipoModelo" IsForeignKey="true" />
+      <Association Name="Usuarios_VehiculoUsuario" Member="Usuarios" ThisKey="Id" OtherKey="Id" Type="Usuarios" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_Modelos" Member="v_Modelos">
+    <Type Name="v_Modelos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Modelo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Repuestos" Member="Repuestos">
+    <Type Name="Repuestos">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CodigoProducto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCombustible" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EsUsado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Repuestos_Fotos" Member="Fotos" ThisKey="Id" OtherKey="IdRepuesto" Type="Fotos" />
+      <Association Name="Repuestos_RepuestosPorTipoDeModelo" Member="RepuestosPorTipoDeModelo" ThisKey="Id" OtherKey="IdRepuesto" Type="RepuestosPorTipoDeModelo" />
+      <Association Name="Repuestos_DetalleCarrito" Member="DetalleCarrito" ThisKey="Id" OtherKey="IdRepuesto" Type="DetalleCarrito" />
+      <Association Name="Categorias_Repuestos" Member="Categorias" ThisKey="IdCategoria" OtherKey="Id" Type="Categorias" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Combustibles_Repuestos" Member="Combustibles" ThisKey="IdCombustible" OtherKey="Id" Type="Combustibles" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_repuestosPorTipoDeModelo" Member="v_repuestosPorTipoDeModelo">
+    <Type Name="v_repuestosPorTipoDeModelo">
+      <Column Name="IdRepuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoProducto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IdCombustible" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Combustible" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EsUsado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Foto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IdTipoModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModelo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modelo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RangoA_os" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetalleCarrito" Member="DetalleCarrito">
+    <Type Name="DetalleCarrito">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdCarrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdRepuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Carritos_DetalleCarrito" Member="Carritos" ThisKey="IdCarrito" OtherKey="Id" Type="Carritos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Repuestos_DetalleCarrito" Member="Repuestos" ThisKey="IdRepuesto" OtherKey="Id" Type="Repuestos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Clave" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Administrador" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Habilitado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Association Name="Usuarios_Carritos" Member="Carritos" ThisKey="Id" OtherKey="IdUsuario" Type="Carritos" />
+      <Association Name="Usuarios_DetalleUsuario" Member="DetalleUsuario" ThisKey="Id" OtherKey="Id" Type="DetalleUsuario" Cardinality="One" />
+      <Association Name="Usuarios_VehiculoUsuario" Member="VehiculoUsuario" ThisKey="Id" OtherKey="Id" Type="VehiculoUsuario" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_Usuarios" Member="v_Usuarios">
+    <Type Name="v_Usuarios">
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Clave" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Administrador" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Habilitado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IdTipoModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoModelo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A_o" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdModelo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modelo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RangoA_os" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_Ordenes" Member="v_Ordenes">
+    <Type Name="v_Ordenes">
+      <Column Name="IdOrden" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTipoPago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPago" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdZona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Zona" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Procesada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IdCarrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

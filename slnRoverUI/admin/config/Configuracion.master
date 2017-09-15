@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="Configuracion.master.cs" Inherits="slnRoverUI.admin.config.Configuracion" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="InfoPaginaActual" runat="server">
+    <asp:ContentPlaceHolder ID="PaginaActual" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Cabeceras" runat="server">
+    <asp:ContentPlaceHolder ID="Cabecera" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Cuerpo" runat="server">
+    <hr />
+    <table width="100%" border="0" align="center" cellpadding="3" id="DinamTable_Cont" style="margin-top: 20px;">
+        <tbody>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="Contenido" runat="server" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="contenedor-footer">
+
+        <div style="overflow: hidden; width: 100%;">
+            <div class="piePagina">
+                <br />
+                <a href="usuarios.aspx" style="background-color: inherit;" class="Menu-top-blanco">Usuarios</a>
+            </div>
+            <div class="piePagina">
+                <br />
+                <a href="configuracion.aspx" style="background-color: inherit;" class="Menu-top-blanco">Configuraciones</a>
+            </div>
+        </div>
+
+    </div>
+</asp:Content>

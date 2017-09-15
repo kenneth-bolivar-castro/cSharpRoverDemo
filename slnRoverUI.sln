@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slnRoverUI", "slnRoverUI\slnRoverUI.csproj", "{D3476E77-CD94-4170-AF21-0B529FDD606E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slnRoverDatos", "slnRoverDatos\slnRoverDatos.csproj", "{2CCA8964-BC77-4287-A8F7-ACE48AC7C91F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slnRoverControl", "slnRoverControl\slnRoverControl.csproj", "{3D680406-7C9F-4CC5-A3BF-5DCE585E8BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "slnRoverHerramientas", "slnRoverHerramientas\slnRoverHerramientas.csproj", "{BEFE562A-EC45-4784-9402-B212C6308193}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccLocalPath1 = slnRoverControl
+		SccLocalPath2 = slnRoverDatos
+		SccLocalPath3 = slnRoverHerramientas
+		SccLocalPath4 = slnRoverUI
+		SccNumberOfProjects = 5
+		SccProjectName1 = slnRoverControl
+		SccProjectName2 = slnRoverDatos
+		SccProjectName3 = slnRoverHerramientas
+		SccProjectName4 = slnRoverUI
+		SccProjectUniqueName1 = slnRoverControl\\slnRoverControl.csproj
+		SccProjectUniqueName2 = slnRoverDatos\\slnRoverDatos.csproj
+		SccProjectUniqueName3 = slnRoverHerramientas\\slnRoverHerramientas.csproj
+		SccProjectUniqueName4 = slnRoverUI\\slnRoverUI.csproj
+		SccTeamFoundationServer = https://lepusoft.tfspreview.com/defaultcollection
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CCA8964-BC77-4287-A8F7-ACE48AC7C91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCA8964-BC77-4287-A8F7-ACE48AC7C91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCA8964-BC77-4287-A8F7-ACE48AC7C91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCA8964-BC77-4287-A8F7-ACE48AC7C91F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D680406-7C9F-4CC5-A3BF-5DCE585E8BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D680406-7C9F-4CC5-A3BF-5DCE585E8BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D680406-7C9F-4CC5-A3BF-5DCE585E8BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D680406-7C9F-4CC5-A3BF-5DCE585E8BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFE562A-EC45-4784-9402-B212C6308193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFE562A-EC45-4784-9402-B212C6308193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFE562A-EC45-4784-9402-B212C6308193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFE562A-EC45-4784-9402-B212C6308193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3476E77-CD94-4170-AF21-0B529FDD606E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3476E77-CD94-4170-AF21-0B529FDD606E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3476E77-CD94-4170-AF21-0B529FDD606E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3476E77-CD94-4170-AF21-0B529FDD606E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

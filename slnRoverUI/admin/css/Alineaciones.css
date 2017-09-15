@@ -1,0 +1,88 @@
+﻿body
+{
+    font-family: Verdana;
+    font-size: 11px;
+}
+.botonesForm
+{
+    width: 100px;
+    padding: 5px;
+    background-color: #003399;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+.dvFlotanteIz
+{
+    float: left;
+}
+.dvFlotanteDe
+{
+    float: right;
+}
+.dvProcesoEliminar
+{
+    height: 110px;
+}
+.titulos
+{
+    font-size: 12px;
+    color: #283f6d;
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.dvGeneralPanel
+{
+    overflow: hidden;
+    margin-top: 0%;
+}
+.dvTituloProceso
+{
+    text-align: left;
+    font-size: 20px;
+    text-indent: 40px;
+    color: #003399;
+    margin-bottom: 15px;
+}
+.dvPrimerColumna
+{
+    float: left;
+    margin-left: 8%;
+    width: 445px;
+}
+.dvBotonesCentral
+{
+    width: 250px;
+    float: right;
+    margin-right: 330px;
+}
+.dvMensajeError
+{
+    text-align: right;
+    margin-top: 20px;
+}
+.dvBtnsCentral
+{
+    width: 250px;
+    float: right;
+    margin-right: 34px;
+    margin-top: 10px;
+}
+.dvPrimerColumnaNoticias
+{
+    float: left;
+    margin-left: 5%;
+}
+.dvBtnsCntrl
+{
+    width: 250px;
+    float: right;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+.dvColumnaUnica
+{
+    float: left;
+    margin-left: 20%;
+}

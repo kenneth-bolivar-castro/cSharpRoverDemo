@@ -1,0 +1,313 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Inicio.master.cs" Inherits="slnRoverUI.Inicio" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>REPUESTOS ROVER</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/btn-portada.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="contenedor">
+            <div id="cont-general">
+                <div id="cont-banner">
+                    <div class="caja1">
+                        <div class="menutop">
+                            <div class="boxcarritotop">
+                                <asp:HyperLink runat="server" NavigateUrl="Carrito.aspx" CssClass="btncarrito" ID="hlnkCarrito" Visible="false" />
+                            </div>
+                            <div class="buscarback">
+                                <asp:LinkButton ID="lnkbtnIrPortada" CssClass="btn-portada" runat="server" OnClick="lnkbtnIrPortada_Click"></asp:LinkButton>
+                            </div>
+                        </div>
+                        <div class="logo">
+                        </div>
+                    </div>
+                    <div class="caja2">
+                        <div class="bannertopcarro">
+                        </div>
+                        <div class="login-title">
+                        </div>
+                        <div class="login-caja">
+                            <center>
+                                <asp:Label ID="lblLgnInicioSession" Font-Bold="true" ForeColor="Red" runat="server" Text=""></asp:Label></center>
+                            <asp:Panel ID="pnlSessionIniciada" runat="server" Visible="false" Style="margin-top: 30px; margin-left: 80px;">
+                                <asp:Label ID="LblLogin" runat="server" CssClass="texto-gris" Text="" Visible="false"></asp:Label><br />
+                                <asp:LinkButton Text="Cerrar sesión" runat="server" Visible="False" ID="lnkbtnCerrarSession" OnClick="lnkbtnCerrarSession_Click"></asp:LinkButton>
+                                <asp:HyperLink Text="Ordenes" runat="server" Visible="false" ID="hypOrdenes" NavigateUrl="Ordenes.aspx" />
+                            </asp:Panel>
+                            <asp:Login ID="lgnInicioSession" runat="server" LabelStyle-CssClass="texto-gris" TitleText="" OnAuthenticate="lgnInicioSession_Authenticate">
+                                <CheckBoxStyle CssClass="texto-gris" />
+                                <LabelStyle CssClass="texto-gris" />
+                                <LayoutTemplate>
+                                    <table width="100%" border="0" height="76%" align="right" cellpadding="0" cellspacing="0">
+                                        <tr style="width: 100%">
+                                            <td height="18" colspan="4">
+                                                <div align="right">
+                                                    <table width="100%" border="0" height="76%" align="right" cellpadding="0" cellspacing="0">
+                                                        <tr style="width: 100%">
+                                                            <td width="38%" height="26" class="texto-gris">
+                                                                <div align="left">
+                                                                    <label for="username_vmlogin">
+                                                                        Usuario</label>
+                                                                </div>
+                                                            </td>
+                                                            <td width="62%" colspan="4" class="texto-gris">
+                                                                <strong><span class="link-text-white">
+                                                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server"
+                                                                        ControlToValidate="UserName"
+                                                                        ErrorMessage="El correo electronico es obligatorio." ForeColor="Red"
+                                                                        ToolTip="El correo electronico es obligatorio." ValidationGroup="lgnIngresar">*</asp:RequiredFieldValidator>
+                                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server"
+                                                                        ControlToValidate="UserName" ToolTip="Debe ser correo electronico valido." ForeColor="Red"
+                                                                        ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                                                        ValidationGroup="lgnIngresar">*</asp:RegularExpressionValidator>
+                                                                </span></strong>
+                                                            </td>
+                                                            <td rowspan="2">
+                                                                <asp:Button ID="Login" CommandName="Login" class="button" ValidationGroup="lgnIngresar" runat="server" Text="Login"></asp:Button>
+                                                        </tr>
+                                                        <tr style="width: 100%">
+                                                            <td height="20" class="texto-gris">
+                                                                <div align="left">
+                                                                    <label for="password_vmlogin">
+                                                                        Contraseña</label>
+                                                                </div>
+                                                            </td>
+                                                            <td colspan="4" class="texto-gris">
+                                                                <strong><span class="link-text-white">
+                                                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ForeColor="Red"
+                                                                        ControlToValidate="Password" ErrorMessage="La clave es obligatoria."
+                                                                        ToolTip="La clave es obligatoria." ValidationGroup="lgnIngresar">*</asp:RequiredFieldValidator>
+                                                                </span></strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="width: 100%">
+                                                            <td height="18" colspan="5">
+                                                                <div align="right">
+                                                                    <a href="RestableceClave.aspx" class="texto-gris"><strong>Recordar Contraseña?</strong>
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div align="right">
+                                                                    <a href="Registrese.aspx" class="texto-verde-top">Registrese aqu&iacute;</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                        </tr>
+                                    </table>
+                                </LayoutTemplate>
+                            </asp:Login>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="menubacktop">
+                        <div id="boxmenuprincipaltop">
+                            <div align="center">
+                                <a href="Inicio.aspx" class="menuprincipaltop">INICIO</a>
+                                <a href="Nosotros.aspx" class="menuprincipaltop">SOBRE NOSOTROS</a>
+                                <a href="Inicio.aspx" class="menuprincipaltop">TIENDA EN LINEA</a>
+                                <a href="Registrese.aspx" class="menuprincipaltop">REGISTRARSE</a>
+                                <a href="Buscador.aspx" class="menuprincipaltop">BUSCADOR</a>
+                                <a href="Taller.aspx" class="menuprincipaltop">TALLER</a>
+                                <a href="Contactenos.aspx" class="menuprincipaltop">CONTACTENOS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont-info">
+                    <div id="columnaiz">
+                        <div id="cajainfocolumnaiz">
+                            <div class="imgiz1">
+                            </div>
+                            <div id="boxiz">
+                                <asp:Literal ID="ltlCategorias" runat="server"></asp:Literal>
+                            </div>
+                            <div id="nuevoproductotit"></div>
+                            <div class="clear">
+                            </div>
+                            <br />
+                            <table id="Table_01" width="208" height="92" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="19">
+                                        <img alt="" src="images/box-info/1.png" width="208" height="19" alt="" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="80" background="images/box-info/2.png">
+                                        <table width="180" border="0" align="center">
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <div align="center">
+                                                        <asp:Label ID="lblProductoPrimer" CssClass="linksfooterAmarillo" runat="server" Font-Bold="true"></asp:Label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <div align="left">
+                                                        <asp:HyperLink ID="hlnkProductoPrimer" runat="server">
+                                                            <asp:Image Height="110px" Width="140px" ID="imgProductoPrimer" runat="server" />
+                                                        </asp:HyperLink>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="30" valign="top">
+                                        <img alt="" src="images/box-info/3.png" width="208" height="30" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <table id="Table_2" width="208" height="89" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="19">
+                                        <img alt="" src="images/box-info/1.png" width="208" height="19" alt="" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" background="images/box-info/2.png">
+                                        <table width="190" border="0" align="center">
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <div align="center">
+                                                        <asp:Label ID="lblProductoSegundo" CssClass="linksfooterAmarillo" runat="server"
+                                                            Font-Bold="true"></asp:Label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <div align="left">
+                                                        <asp:HyperLink ID="hlnkProductoSegundo" runat="server">
+                                                            <asp:Image Height="110px" Width="140px" ID="imgProductoSegundo" runat="server" />
+                                                        </asp:HyperLink>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="30" valign="top">
+                                        <img alt="" src="images/box-info/3.png" width="208" height="30" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <div align="center">
+                                <br />
+                            </div>
+                            <table id="Table_" width="208" height="92" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="19">
+                                        <img alt="" src="images/box-info/1-verde.png" width="208" height="19" alt="" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="80" background="images/box-info/2-verde.png">
+                                        <table width="190" border="0" align="center">
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <asp:Label ID="lblProductoTercer" CssClass="linksfooterAmarillo" runat="server" Font-Bold="true"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="linksfooterblanco">
+                                                    <div align="left">
+                                                        <asp:HyperLink ID="hlnkProductoTercer" runat="server">
+                                                            <asp:Image Height="110px" Width="140px" ID="imgProductoTercer" runat="server" />
+                                                        </asp:HyperLink>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="30" valign="top">
+                                        <img alt="" src="images/box-info/3-verde.png" width="208" height="30" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <div id="boxiz2">
+                            </div>
+                        </div>
+                        <div align="center">
+                            <img alt="" src="images/columniz/img3-g.jpg" width="208" height="14" />
+                        </div>
+                    </div>
+                    <div id="columnacentral">
+                        <div id="BoxNuevosProd">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <div class="backfooterproduc">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="columnadere">
+                        <div id="cajainfocolumnaiz">
+                            <div class="imgiz1">
+                            </div>
+                            <div id="boxiz">
+                            </div>
+                            <a href="Nosotros.aspx" class="banner-nosotros"></a>
+                            <div id="boxiz2">
+                            </div>
+                            <div class="imgder2">
+                            </div>
+                            <p>
+                                <a href="Buscador.aspx" class="banner-soloaqui"></a>
+                            </p>
+                            <p>
+                                <a href="Contactenos.aspx" class="bannercontacto"></a>
+                            </p>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <div class="imgder2">
+                            </div>
+                            <img alt="" src="images/columniz/img3-g.jpg" width="208" height="14" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cont-footerfull">
+                <div id="cont-footer">
+                    <div class="footerboxmenu">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="cajamenufooter">
+                        <div align="center">
+                            <a href="Inicio.aspx" class="linkverde">INICIO</a>:: 
+                        <a href="Nosotros.aspx" class="linkverde">SOBRE NOSOTROS</a>::
+                        <a href="Inicio.aspx" class="linkverde">TIENDA EN LINEA</a>:: 
+                        <a href="Registrese.aspx" class="linkverde">REGISTRARSE</a>::
+                        <a href="Buscador.aspx" class="linkverde">BUSCADOR</a>::
+                        <a href="Contactenos.aspx" class="linkverde">CONTACTENOS</a>
+                            <div class="clear">
+                            </div>
+                            <span class="textblancopeq"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

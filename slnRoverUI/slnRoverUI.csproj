@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3476E77-CD94-4170-AF21-0B529FDD606E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>slnRoverUI</RootNamespace>
+    <AssemblyName>slnRoverUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\config\Usuarios.aspx" />
+    <Content Include="admin\css\Alineaciones.css" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\images\ajax-loader.gif" />
+    <Content Include="admin\images\footer\administrador-corte_01.png" />
+    <Content Include="admin\images\footer\administrador-corte_02.png" />
+    <Content Include="admin\images\footer\administrador-corte_03.png" />
+    <Content Include="admin\images\footer\administrador-corte_04.png" />
+    <Content Include="admin\images\footer\administrador-corte_05.png" />
+    <Content Include="admin\images\footer\administrador-corte_06.png" />
+    <Content Include="admin\images\footer\administrador-corte_07.png" />
+    <Content Include="admin\images\footer\administrador-corte_08.png" />
+    <Content Include="admin\images\footer\elaborado-innovomedia.jpg" />
+    <Content Include="admin\images\images\administrador-corte.jpg" />
+    <Content Include="admin\images\images\back-central.jpg" />
+    <Content Include="admin\images\images\back-footer-info.jpg" />
+    <Content Include="admin\images\images\back-footer.jpg" />
+    <Content Include="admin\images\images\back-top.jpg" />
+    <Content Include="admin\images\images\back.jpg" />
+    <Content Include="admin\images\images\btn-cerrar-secion-und.png" />
+    <Content Include="admin\images\images\btn-cerrar-secion.png" />
+    <Content Include="admin\images\images\editar.jpg" />
+    <Content Include="admin\images\images\eliminar.jpg" />
+    <Content Include="admin\images\images\fondo-info.jpg" />
+    <Content Include="admin\images\images\img1-top.jpg" />
+    <Content Include="admin\images\images\img2-top.jpg" />
+    <Content Include="admin\images\images\linea.jpg" />
+    <Content Include="admin\images\images\logo.png" />
+    <Content Include="admin\images\images\logotipo.png" />
+    <Content Include="admin\images\images\menu_02.png" />
+    <Content Include="admin\images\images\menu_04.png" />
+    <Content Include="admin\images\images\monedas.png" />
+    <Content Include="admin\images\images\nuevo.jpg" />
+    <Content Include="admin\images\images\pago.png" />
+    <Content Include="admin\images\images\zonaenvios.png" />
+    <Content Include="admin\images\Img-General\box\1.png" />
+    <Content Include="admin\images\Img-General\box\2.png" />
+    <Content Include="admin\images\Img-General\box\3.png" />
+    <Content Include="admin\images\info\ico.jpg" />
+    <Content Include="admin\images\info\ico.png" />
+    <Content Include="admin\images\info\img1.jpg" />
+    <Content Include="admin\images\info\img2.jpg" />
+    <Content Include="admin\images\info\img3.jpg" />
+    <Content Include="admin\images\info\img4.jpg" />
+    <Content Include="admin\images\info\puntos.jpg" />
+    <Content Include="admin\images\info\separador.jpg" />
+    <Content Include="admin\images\loading.gif" />
+    <Content Include="admin\images\menu\btn-back-blanco1.jpg" />
+    <Content Include="admin\images\menu\btn-back-blanco2.jpg" />
+    <Content Include="admin\images\menu\btn-back-blanco3.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris1.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris2.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris3.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris4.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris5.jpg" />
+    <Content Include="admin\images\menu\btn-back-gris6.jpg" />
+    <Content Include="admin\images\menu\esapcio2.jpg" />
+    <Content Include="admin\images\menu\espacio1.jpg" />
+    <Content Include="admin\images\menu\espacio3.jpg" />
+    <Content Include="admin\images\menu\fondo.jpg" />
+    <Content Include="admin\images\menu\linea.jpg" />
+    <Content Include="admin\images\menu\menu_13.jpg" />
+    <Content Include="admin\images\menu\menu_14.jpg" />
+    <Content Include="admin\images\menu\menu_15.jpg" />
+    <Content Include="admin\images\menu\sombra.jpg" />
+    <Content Include="admin\NoAutorizado.aspx" />
+    <Content Include="admin\tienda\controles\repuestos\Procesos.aspx" />
+    <Content Include="admin\tienda\controles\repuestos\RepuestosForm.ascx" />
+    <Content Include="admin\tienda\Repuestos.aspx" />
+    <Content Include="Buscador.aspx" />
+    <Content Include="Carrito.aspx" />
+    <Content Include="Contactenos.aspx" />
+    <Content Include="controles\jQGridTable\fuente.js" />
+    <Content Include="controles\jQGridTable\jQGridTable.ascx" />
+    <Content Include="css\btn-portada.css" />
+    <Content Include="css\portada.css" />
+    <Content Include="css\style.css" />
+    <Content Include="admin\css\style_admin.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\back-banner.jpg" />
+    <Content Include="images\back-menutop.jpg" />
+    <Content Include="images\backHover.png" />
+    <Content Include="images\box-info\1-verde.png" />
+    <Content Include="images\box-info\1.png" />
+    <Content Include="images\box-info\2-verde.png" />
+    <Content Include="images\box-info\2.png" />
+    <Content Include="images\box-info\3-verde.png" />
+    <Content Include="images\box-info\3.png" />
+    <Content Include="images\box-info\ico.png" />
+    <Content Include="images\Box\box_01.png" />
+    <Content Include="images\Box\box_02.png" />
+    <Content Include="images\Box\box_03.png" />
+    <Content Include="images\btncart.png" />
+    <Content Include="images\btnGenerico.png" />
+    <Content Include="images\btnNext.png" />
+    <Content Include="images\btnregister.png" />
+    <Content Include="images\btnVerCart.png" />
+    <Content Include="images\columnadere\images\banner-accesorios.jpg" />
+    <Content Include="images\columnadere\images\banner-contacto.jpg" />
+    <Content Include="images\columnadere\images\banner-porquenosotros.jpg" />
+    <Content Include="images\columnadere\images\banner-soloaquilandrover.gif" />
+    <Content Include="images\columnadere\images\img1.jpg" />
+    <Content Include="images\columnadere\images\img2.jpg" />
+    <Content Include="images\columnadere\images\img3.jpg" />
+    <Content Include="images\columniz\a.jpg" />
+    <Content Include="images\columniz\accesorios.gif" />
+    <Content Include="images\columniz\Accesorios.png" />
+    <Content Include="images\columniz\img1-g.jpg" />
+    <Content Include="images\columniz\img1.jpg" />
+    <Content Include="images\columniz\img2.jpg" />
+    <Content Include="images\columniz\img3-g.jpg" />
+    <Content Include="images\columniz\img3.jpg" />
+    <Content Include="images\columniz\img4-g.png" />
+    <Content Include="images\columniz\img4.png" />
+    <Content Include="images\columniz\img5-g.png" />
+    <Content Include="images\columniz\img5.png" />
+    <Content Include="images\columniz\img6.png" />
+    <Content Include="images\general\back-menu-footer.jpg" />
+    <Content Include="images\general\back.jpg" />
+    <Content Include="images\general\backfooter.jpg" />
+    <Content Include="images\general\logo.png" />
+    <Content Include="images\home\banner\btnp-car.jpg" />
+    <Content Include="images\home\banner\fotbanner.jpg" />
+    <Content Include="images\home\banner\images\1.jpg" />
+    <Content Include="images\home\banner\images\2.jpg" />
+    <Content Include="images\home\banner\images\3.jpg" />
+    <Content Include="images\home\banner\linea-menu.jpg" />
+    <Content Include="images\home\banner\lupa.jpg" />
+    <Content Include="images\ImgBuscador\buscador1.png" />
+    <Content Include="images\ImgBuscador\buscador2.png" />
+    <Content Include="images\ImgBuscador\buscador3.png" />
+    <Content Include="images\ImgBuscador\images\buscador1.png" />
+    <Content Include="images\ImgBuscador\images\buscador2.png" />
+    <Content Include="images\ImgBuscador\images\buscador3.png" />
+    <Content Include="images\ImgInicio\back.jpg" />
+    <Content Include="images\ImgInicio\btn.png" />
+    <Content Include="images\ImgInicio\fondo-info-home.jpg" />
+    <Content Include="images\ImgInicio\foto-principal.png" />
+    <Content Include="images\ImgInicio\foto.jpg" />
+    <Content Include="images\ImgInicio\logotipo.png" />
+    <Content Include="images\ImgInicio\top.jpg" />
+    <Content Include="images\ImgInicio\txt.png" />
+    <Content Include="images\infocentral\centro.html" />
+    <Content Include="images\infocentral\images\1.jpg" />
+    <Content Include="images\infocentral\images\2.gif" />
+    <Content Include="images\infocentral\images\3.gif" />
+    <Content Include="images\infocentral\images\4.jpg" />
+    <Content Include="images\infocentral\images\5.jpg" />
+    <Content Include="images\infocentral\images\6.jpg" />
+    <Content Include="images\infocentral\images\7.jpg" />
+    <Content Include="images\infocentral\images\back.jpg" />
+    <Content Include="images\line.jpg" />
+    <Content Include="images\productos\1.jpg" />
+    <Content Include="images\productos\ico-carrito.jpg" />
+    <Content Include="images\recursos\20120429-200906.483_logotipo.png" />
+    <Content Include="images\recursos\20120705-153519.465_bujia.jpg" />
+    <Content Include="images\recursos\20120705-153626.487_GDB541.JPG" />
+    <Content Include="images\recursos\20120705-162131.088_QWB425.jpg" />
+    <Content Include="images\recursos\20120705-162206.519_11420.JPG" />
+    <Content Include="images\recursos\20120710-102303.607_21519.jpg" />
+    <Content Include="images\recursos\20120710-111104.602_PND126.JPG" />
+    <Content Include="images\recursos\20120710-124158.668_465175-0001.JPG" />
+    <Content Include="images\recursos\20120712-092032.024_F0318071314.jpg" />
+    <Content Include="images\topMenuLine.png" />
+    <Content Include="images\verportada-btn.jpg" />
+    <Content Include="IniciarSession.aspx" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="js\libs\jquery-1.8.2.js" />
+    <Content Include="js\libs\jquery-1.8.2.min.js">
+      <DependentUpon>jquery-1.8.2.js</DependentUpon>
+    </Content>
+    <Content Include="js\libs\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="js\libs\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="js\libs\jquery-ui\jquery-ui.css" />
+    <Content Include="js\libs\jquery-ui\jquery-ui.js" />
+    <Content Include="js\menus\fuente.js" />
+    <Content Include="js\modals\comandos.js" />
+    <Content Include="js\modals\fuente.js" />
+    <Content Include="js\plugins\dataTable\css\demo_page.css" />
+    <Content Include="js\plugins\dataTable\css\demo_table.css" />
+    <Content Include="js\plugins\dataTable\css\demo_table_jui.css" />
+    <Content Include="js\plugins\dataTable\css\jquery.dataTables.css" />
+    <Content Include="js\plugins\dataTable\css\jquery.dataTables_themeroller.css" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\smoothness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\plugins\dataTable\css\themes\ui-lightness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="js\plugins\dataTable\images\back_disabled.png" />
+    <Content Include="js\plugins\dataTable\images\back_enabled.png" />
+    <Content Include="js\plugins\dataTable\images\back_enabled_hover.png" />
+    <Content Include="js\plugins\dataTable\images\favicon.ico" />
+    <Content Include="js\plugins\dataTable\images\forward_disabled.png" />
+    <Content Include="js\plugins\dataTable\images\forward_enabled.png" />
+    <Content Include="js\plugins\dataTable\images\forward_enabled_hover.png" />
+    <Content Include="js\plugins\dataTable\images\sort_asc.png" />
+    <Content Include="js\plugins\dataTable\images\sort_asc_disabled.png" />
+    <Content Include="js\plugins\dataTable\images\sort_both.png" />
+    <Content Include="js\plugins\dataTable\images\sort_desc.png" />
+    <Content Include="js\plugins\dataTable\images\sort_desc_disabled.png" />
+    <Content Include="js\plugins\dataTable\jquery.dataTables.js" />
+    <Content Include="js\plugins\dataTable\jquery.dataTables.min.js">
+      <DependentUpon>jquery.dataTables.js</DependentUpon>
+    </Content>
+    <Content Include="js\plugins\dataTable\jquery.js" />
+    <Content Include="js\plugins\metaData\jquery.metadata.js" />
+    <Content Include="js\plugins\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\1.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\2.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\3.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\4.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\5.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\6.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\t_1.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\t_2.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\t_3.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\t_4.jpg" />
+    <Content Include="js\plugins\prettyPhoto\images\thumbnails\t_5.jpg" />
+    <Content Include="js\plugins\prettyPhoto\jquery.prettyPhoto.js" />
+    <Content Include="js\plugins\simpleModal\basic.js" />
+    <Content Include="js\plugins\simpleModal\css\basic.css" />
+    <Content Include="js\plugins\simpleModal\css\basic_ie.css" />
+    <Content Include="js\plugins\simpleModal\img\basic\x.png" />
+    <Content Include="js\plugins\simpleModal\jquery.simplemodal.js" />
+    <Content Include="js\plugins\tiny_mce\jquery.tinymce.js" />
+    <Content Include="js\plugins\tiny_mce\langs\en.js" />
+    <Content Include="js\plugins\tiny_mce\license.txt" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\media.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="js\plugins\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\preview\example.html" />
+    <Content Include="js\plugins\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="js\plugins\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\props.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\style\readme.txt" />
+    <Content Include="js\plugins\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\row.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\table\table.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\template\template.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="js\plugins\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="js\plugins\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\plugins\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="js\plugins\tiny_mce\tiny_mce.js" />
+    <Content Include="js\plugins\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="js\plugins\tiny_mce\tiny_mce_src.js" />
+    <Content Include="js\plugins\tiny_mce\utils\editable_selects.js" />
+    <Content Include="js\plugins\tiny_mce\utils\form_utils.js" />
+    <Content Include="js\plugins\tiny_mce\utils\mctabs.js" />
+    <Content Include="js\plugins\tiny_mce\utils\validate.js" />
+    <Content Include="Nosotros.aspx" />
+    <Content Include="Ordenes.aspx" />
+    <Content Include="plantillas\_Contactenos.html" />
+    <Content Include="plantillas\_InfoRepuestos.html" />
+    <Content Include="plantillas\_ListaRepuestos.html" />
+    <Content Include="plantillas\_RestableceClave.html" />
+    <Content Include="Registrese.aspx" />
+    <Content Include="Repuestos.aspx" />
+    <Content Include="RepuestosCategorias.aspx" />
+    <Content Include="RestableceClave.aspx" />
+    <Content Include="ServicioWebRover.asmx" />
+    <Content Include="Taller.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\config\Configuracion.master.cs">
+      <DependentUpon>Configuracion.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\config\Configuracion.master.designer.cs">
+      <DependentUpon>Configuracion.master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\config\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\config\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\NoAutorizado.aspx.cs">
+      <DependentUpon>NoAutorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\NoAutorizado.aspx.designer.cs">
+      <DependentUpon>NoAutorizado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Procesos.Master.cs">
+      <DependentUpon>Procesos.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Procesos.Master.designer.cs">
+      <DependentUpon>Procesos.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\tienda\Inventario.master.cs">
+      <DependentUpon>Inventario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\tienda\Inventario.master.designer.cs">
+      <DependentUpon>Inventario.master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\tienda\controles\repuestos\Procesos.aspx.cs">
+      <DependentUpon>Procesos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\tienda\controles\repuestos\Procesos.aspx.designer.cs">
+      <DependentUpon>Procesos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\tienda\controles\repuestos\RepuestosForm.ascx.cs">
+      <DependentUpon>RepuestosForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\tienda\controles\repuestos\RepuestosForm.ascx.designer.cs">
+      <DependentUpon>RepuestosForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\tienda\Repuestos.aspx.cs">
+      <DependentUpon>Repuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\tienda\Repuestos.aspx.designer.cs">
+      <DependentUpon>Repuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buscador.aspx.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buscador.aspx.designer.cs">
+      <DependentUpon>Buscador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactenos.aspx.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactenos.aspx.designer.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controles\jQGridTable\jQGridTable.ascx.cs">
+      <DependentUpon>jQGridTable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controles\jQGridTable\jQGridTable.ascx.designer.cs">
+      <DependentUpon>jQGridTable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSession.aspx.cs">
+      <DependentUpon>IniciarSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IniciarSession.aspx.designer.cs">
+      <DependentUpon>IniciarSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.Master.cs">
+      <DependentUpon>Inicio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.Master.designer.cs">
+      <DependentUpon>Inicio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Nosotros.aspx.cs">
+      <DependentUpon>Nosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nosotros.aspx.designer.cs">
+      <DependentUpon>Nosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ordenes.aspx.cs">
+      <DependentUpon>Ordenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ordenes.aspx.designer.cs">
+      <DependentUpon>Ordenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrese.aspx.cs">
+      <DependentUpon>Registrese.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrese.aspx.designer.cs">
+      <DependentUpon>Registrese.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repuestos.aspx.cs">
+      <DependentUpon>Repuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Repuestos.aspx.designer.cs">
+      <DependentUpon>Repuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepuestosCategorias.aspx.cs">
+      <DependentUpon>RepuestosCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepuestosCategorias.aspx.designer.cs">
+      <DependentUpon>RepuestosCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestableceClave.aspx.cs">
+      <DependentUpon>RestableceClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestableceClave.aspx.designer.cs">
+      <DependentUpon>RestableceClave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioWebRover.asmx.cs">
+      <DependentUpon>ServicioWebRover.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller.aspx.cs">
+      <DependentUpon>Taller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Taller.aspx.designer.cs">
+      <DependentUpon>Taller.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\slnRoverControl\slnRoverControl.csproj">
+      <Project>{3d680406-7c9f-4cc5-a3bf-5dce585e8bbb}</Project>
+      <Name>slnRoverControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\slnRoverDatos\slnRoverDatos.csproj">
+      <Project>{2cca8964-bc77-4287-a8f7-ace48ac7c91f}</Project>
+      <Name>slnRoverDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\slnRoverHerramientas\slnRoverHerramientas.csproj">
+      <Project>{befe562a-ec45-4784-9402-b212c6308193}</Project>
+      <Name>slnRoverHerramientas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Inicio.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\box-info\Thumbs.db" />
+    <Content Include="images\columnadere\images\Thumbs.db" />
+    <Content Include="images\columniz\Thumbs.db" />
+    <Content Include="images\general\Thumbs.db" />
+    <Content Include="images\home\banner\images\Thumbs.db" />
+    <Content Include="images\home\banner\Thumbs.db" />
+    <Content Include="images\ImgBuscador\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Admin.Master" />
+    <Content Include="admin\tienda\Inventario.master" />
+    <Content Include="js\plugins\dataTable\images\Sorting icons.psd" />
+    <Content Include="admin\config\Configuracion.master" />
+    <Content Include="admin\Procesos.Master" />
+    <Content Include="js\plugins\prettyPhoto\images\.DS_Store" />
+    <Content Include="js\plugins\prettyPhoto\images\fullscreen\.DS_Store" />
+    <None Include="Properties\PublishProfiles\Developer.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5265</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:46460/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

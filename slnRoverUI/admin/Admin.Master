@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="slnRoverUI.admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>REPUESTOS ROVER Administracion</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="text/javascript" src="/js/libs/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="/js/menus/fuente.js"></script>
+    <script type="text/javascript" src="/js/modals/fuente.js"></script>
+    <script type="text/javascript" src="/js/plugins/simpleModal/jquery.simplemodal.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/plugins/simpleModal/css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="/admin/css/style_admin.css" />
+    <asp:ContentPlaceHolder ID="Cabeceras" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="banner">
+        <div class="img-top-left">
+        </div>
+        <div class="img-top-right">
+        </div>
+        <div id="logo">
+        </div>
+        <asp:LinkButton ID="LinkButton1" CssClass="btn-cerrar" Text="Cerrar sesi&oacute;n" runat="server"></asp:LinkButton>
+        <div class="clear">
+        </div>
+        <div class="linea">
+        </div>
+    </div>
+    <div id="contenedor-info">
+        <table width="98%" height="92" border="0" align="center" cellpadding="0" cellspacing="0"
+            id="Table_">
+            <tr>
+                <td height="33">
+                    <div id="dvTabsMenus" style="overflow: hidden; width: 100%;">
+                        <div align="center" class="Menu-top-azul">
+                            <br />
+                            <a href="/admin/tienda/Repuestos.aspx" title="Tienda Virtual">Tienda Virtual</a>
+                        </div>
+                        <div align="center" class="Menu-top-blanco">
+                            <br />
+                            <a href="/admin/config/Usuarios.aspx" title="Configuraciones">Configuraciones</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF">
+                    <table width="100%" border="0">
+                        <tr>
+                            <asp:ContentPlaceHolder ID="InfoPaginaActual" runat="server" />
+                        </tr>
+                        <tr>
+                            <asp:Panel ID="PnlOpciones" runat="server">
+                                <td width="10%">
+                                    <img alt="Incluir" src="/admin/images/images/nuevo.jpg" width="114" height="32" border="0"
+                                        id="ImgNuevo" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="Editar" src="/admin/images/images/editar.jpg" width="114" height="32" border="0"
+                                        id="ImgEditar" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="Eliminar" src="/admin/images/images/eliminar.jpg" width="114" height="32" border="0"
+                                        id="ImgEliminar" />
+                                </td>
+                                <td width="70%">&nbsp;
+                                </td>
+                            </asp:Panel>
+                            <asp:Panel ID="PnlOpConfg" Visible="false" runat="server">
+                                <td width="10%">
+                                    <img alt="Logo" src="/admin/images/images/logo.png" width="114" height="32" border="0"
+                                        id="ImgLogo" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="Editar" src="/admin/images/images/editar.jpg" width="114" height="32" border="0"
+                                        id="Img1" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="Envios" src="/admin/images/images/zonaenvios.png" width="114" height="32" border="0"
+                                        id="ImgEnvios" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="FormaPago" src="/admin/images/images/pago.png" width="114" height="32" border="0"
+                                        id="ImgFormaPagos" />
+                                </td>
+                                <td width="10%">
+                                    <img alt="Monedas" src="/admin/images/images/monedas.png" width="114" height="32" border="0"
+                                        id="ImgMonedas" />
+                                </td>
+                                <td width="50%">&nbsp;
+                                </td>
+                            </asp:Panel>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="Cuerpo" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

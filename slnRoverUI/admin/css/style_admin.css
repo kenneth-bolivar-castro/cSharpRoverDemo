@@ -1,0 +1,257 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('/admin/images/images/back.jpg');
+    background-repeat: repeat-x;
+    background-color: #b5c0d4;
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+#contenedor
+{
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#banner
+{
+    width: 90%;
+    height: 110px;
+    background-image: url('/admin/images/images/back-top.jpg');
+    margin: auto;
+}
+
+#contenedor-info
+{
+    width: 90%;
+    background: #f2f2f2;
+    margin: auto;
+    min-height: 300px;
+}
+
+#contenedor-footer
+{
+    width: 90%;
+    height: 75px;
+    background: #c6c6c6;
+    margin: auto;
+}
+
+#logo
+{
+    background-image: url('/admin/images/images/logotipo.png');
+    width: 317px;
+    height: 75px;
+    float: left;
+    margin-top: 15px;
+}
+
+.linea
+{
+    background-image: url('/admin/images/images/linea.jpg');
+    width: 99%;
+    height: 5px;
+    margin: auto;
+}
+
+.clear
+{
+    clear: both;
+}
+
+a.btn-cerrar
+{
+    /*background-image: url('/admin/images/images/btn-cerrar-secion.png');*/
+    display: block;
+    float: right;
+    margin-top: 30px;
+    text-decoration:none;
+    background-color:lightgray;
+    text-align:center;
+    padding:15px;
+    color:white;
+    font-weight:bold;
+}
+
+    a.btn-cerrar:hover
+    {
+        color:black;
+    }
+
+.Menu-top-azul
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0038a7;
+    size: 14px;
+    font-weight: bolder;
+    height: 40px;
+    margin: 5px;
+    width: 10%;
+    float: left;
+    background-color: White;
+}
+
+    .Menu-top-azul a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #0038a7;
+        size: 14px;
+        text-decoration: none;
+    }
+
+        .Menu-top-azul a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #666;
+            size: 14px;
+        }
+
+.Menu-top-blanco
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    size: 13px;
+    font-weight: bolder;
+    margin: 5px;
+    float: left;
+    width: 10%;
+    height: 40px;
+    background-color: Gray;
+}
+
+    .Menu-top-blanco a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #FFF;
+        size: 13px;
+        text-decoration: none;
+    }
+
+        .Menu-top-blanco a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            size: 13px;
+        }
+
+.back-info-central
+{
+    background: #f2f2f2;
+}
+
+.fondo-iz-info
+{
+    background-image: url('/admin/images/info/img1.jpg');
+    width: 80px;
+    height: 30px;
+    text-indent: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 26PX;
+}
+
+.fondo-iz-info2
+{
+    background-image: url('/admin/images/info/img2.jpg');
+    width: 137px;
+    height: 30px;
+    text-indent: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 26PX;
+}
+
+.fondo-centro-info
+{
+    background-image: url('/admin/images/info/img3.jpg');
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 13px;
+}
+
+.fondo-centro-info2
+{
+    background-image: url('/admin/images/info/img4.jpg');
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 13px;
+}
+
+.box-cerrar-editar-info
+{
+    width: 200px;
+    height: 30px;
+    float: right;
+    z-index: 100px;
+    margin-top: -24px;
+}
+
+.link-blanco
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 12px;
+}
+
+    .link-blanco a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #FFF;
+        font-size: 12px;
+    }
+
+        .link-blanco a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FFF;
+            font-size: 12px;
+        }
+
+.img-top-left
+{
+    background-image: url('/admin/images/images/img1-top.jpg');
+    width: 12px;
+    height: 11px;
+    float: left;
+    z-index: 10000px;
+}
+
+.img-top-right
+{
+    background-image: url('/admin/images/images/img2-top.jpg');
+    width: 10px;
+    height: 11px;
+    float: right;
+    z-index: 20000px;
+}
+
+.piePagina
+{
+    background-image: url('/admin/images/footer/administrador-corte_05.png');
+    float: left;
+    margin: 2px;
+    text-align: center;
+}
+
+#dvContenedorInformacion
+{
+    min-height: 200px;
+}
+
+.titulos
+{
+    font-size: 12px;
+    color: #283f6d;
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

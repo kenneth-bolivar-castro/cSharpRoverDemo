@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="Inventario.master.cs" Inherits="slnRoverUI.admin.tienda.Inventario" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="InfoPaginaActual" runat="server">
+    <asp:ContentPlaceHolder ID="PaginaActual" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Cabeceras" runat="server">
+    <asp:ContentPlaceHolder ID="Cabecera" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Cuerpo" runat="server">
+    <hr />
+    <table width="100%" border="0" align="center" cellpadding="3" id="DinamTable_Cont" style="margin-top: 20px;">
+        <tbody>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="Contenido" runat="server" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="contenedor-footer">
+
+        <div style="overflow: hidden; width: 100%;">
+            <div class="piePagina">
+                <br />
+                <a href="repuestos.aspx" style="background-color: inherit;" class="Menu-top-blanco">Repuestos</a>
+            </div>
+            <div class="piePagina">
+                <br />
+                <a href="categorias.aspx" style="background-color: inherit;" class="Menu-top-blanco">Categorias</a>
+            </div>
+            <div class="piePagina">
+                <br />
+                <a href="modelos.aspx" style="background-color: inherit;" class="Menu-top-blanco">Modelos</a>
+            </div>
+            <div class="piePagina">
+                <br />
+                <a href="ordenes.aspx" style="background-color: inherit;" class="Menu-top-blanco">Ordenes</a>
+            </div>
+        </div>
+
+    </div>
+
+</asp:Content>

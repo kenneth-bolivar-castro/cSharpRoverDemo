@@ -1,0 +1,1102 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #040703;
+    background-image: url(../images/general/back.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+#contenedor
+{
+    width: 100%;
+    height: auto;
+}
+
+#cont-general
+{
+    width: 972px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#cont-banner
+{
+    width: 972px;
+    height: 260px;
+    background-image: url(../images/back-banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#cont-info
+{
+    width: 972px;
+    background: #000000;
+}
+
+#cont-footerfull
+{
+    width: 100%;
+    height: 153px;
+    background-image: url(../images/general/backfooter.jpg);
+    margin-top: 20px;
+}
+
+#cont-footer
+{
+    width: 972px;
+    height: 153px;
+    background-image: url(../images/general/back-menu-footer.jpg);
+    margin: auto;
+    overflow: hidden;
+}
+
+#mainBody
+{
+    background-color: #FFF;
+}
+
+.imgNewProducts
+{
+    width: 105px;
+    height: 137px;
+    border: #000 1px solid;
+    margin: 5px 0px;
+}
+
+.imgNewProducts2
+{
+    width: 75px;
+    height: 137px;
+    border: #000 1px solid;
+    margin: 5px 0px;
+}
+
+
+.textoProductoTitle2
+{
+    color: #000;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    text-indent: 10px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.textoProducto2
+{
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+    text-indent: 10px;
+    padding-left: 5px;
+    margin: 10;
+    text-align: center;
+}
+
+    .textoProducto2 .productPrice
+    {
+        color: #000;
+        font-size: 12px;
+        text-decoration: none;
+        text-indent: 10px;
+        padding-left: 5px;
+        text-align: center;
+    }
+
+    .textoProducto2 .product-Old-Price
+    {
+        color: red;
+        font-size: 12px;
+        text-decoration: overline;
+        text-indent: 10px;
+        padding-left: 5px;
+        text-align: center;
+    }
+
+
+.textoProductoTitle
+{
+    color: #999;
+    font-size: 12px;
+    background-color: #000000;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    text-indent: 10px;
+    padding-left: 5px;
+}
+
+.textoProducto
+{
+    color: #999;
+    font-size: 10px;
+    background-color: #000000;
+    text-decoration: none;
+    text-indent: 10px;
+    padding-left: 5px;
+    margin: 10;
+}
+
+    .textoProducto .productPrice
+    {
+        color: white;
+        font-size: 10px;
+        text-decoration: none;
+        text-indent: 10px;
+        padding-left: 5px;
+    }
+
+    .textoProducto .product-Old-Price
+    {
+        color: red;
+        font-size: 12px;
+        text-decoration: overline;
+        text-indent: 10px;
+        padding-left: 5px;
+    }
+
+#btncarrito
+{
+    background-image: url(../images/btnVerCart.png);
+}
+
+#fotodertop
+{
+    background-image: url(../images/home/banner/fotbanner.jpg);
+    width: 400px;
+    height: 89px;
+    float: right;
+}
+
+.caja1
+{
+    width: 572px;
+    height: 190px;
+    float: left;
+}
+
+.caja2
+{
+    width: 400px;
+    height: 190px;
+    float: left;
+}
+
+.menutop
+{
+    width: 572px;
+    height: 42px;
+    background: #292728;
+}
+
+.buscarback
+{
+    width: 220px;
+    height: 42px;
+    background-image: url(../images/home/banner/linea-menu.jpg);
+    float: right;
+}
+
+.boxbuscarbackinfo
+{
+    width: 180px;
+    height: 30px;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.btnlupa
+{
+    background-image: url(../images/home/banner/lupa.jpg);
+    width: 20px;
+    height: 21px;
+    float: left;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.bannertopcarro
+{
+    background-image: url('../images/home/banner/fotbanner.jpg');
+    width: 400px;
+    height: 69px;
+    float: right;
+}
+
+.logo
+{
+    background-image: url(../images/general/logo.png);
+    width: 311px;
+    height: 105px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#menubacktop
+{
+    background-image: url(../images/back-menutop.jpg);
+    background-repeat: repeat-x;
+    width: 972px;
+    height: 70px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+#columnaiz
+{
+    width: 213px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+#columnacentral
+{
+    width: 545px;
+    float: left;
+    overflow: hidden;
+    background-color: #000;
+}
+
+#columnadere
+{
+    width: 214px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+#cajainfocolumnaiz
+{
+    width: 208px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    background-image: url(../images/columniz/a.jpg);
+    background-repeat: repeat-y;
+}
+
+.imgiz1
+{
+    background-image: url(../images/columniz/img1-g.jpg);
+    width: 208px;
+    height: 15px;
+}
+
+.imgiz2
+{
+    background-image: url(../images/columniz/img3-g.jpg);
+    width: 208px;
+    height: 18px;
+}
+
+.imgiz3
+{
+    background-image: url(../images/columniz/img4-g.png);
+    width: 208x;
+    height: 17px;
+    margin: auto;
+}
+
+.imgiz4
+{
+    background-image: url(../images/columniz/img5-g.png);
+    width: 208px;
+    height: 13px;
+    margin: auto;
+}
+
+#boxiz
+{
+    width: 184px;
+    margin: auto;
+}
+
+
+
+.linksiz
+{
+    font-size: 12px;
+    height: 35px;
+    text-indent: 5px;
+    background-color: #0e0e0e;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+
+    .linksiz a
+    {
+        color: #999;
+        width: 184px;
+        height: 35px;
+        display: block;
+        text-decoration: none;
+    }
+
+        .linksiz a:hover
+        {
+            color: #333;
+            background-color: #fff;
+        }
+
+.linksiz-negro
+{
+    font-size: 12px;
+    height: 35px;
+    text-indent: 5px;
+    background-color: #393c35;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+
+    .linksiz-negro a
+    {
+        color: #999;
+        width: 184px;
+        height: 35px;
+        display: block;
+        text-decoration: none;
+    }
+
+        .linksiz-negro a:hover
+        {
+            color: #333;
+            background-color: #fff;
+        }
+
+
+
+
+
+.sublevel
+{
+    color: #F3C000;
+    font-size: 12px;
+    height: 19px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    text-indent: 10px;
+    padding: 2px;
+}
+
+    .sublevel a
+    {
+        display: block;
+        padding: 5px;
+    }
+
+        .sublevel a:hover
+        {
+            color: #FFF;
+            font-size: 12px;
+            background-color: #000;
+            text-decoration: none;
+        }
+
+a.accesorios
+{
+    width: 182px;
+    height: 130px;
+    margin: auto;
+    display: block;
+}
+
+#boxiz2
+{
+    width: 208px;
+    margin: auto;
+    height: auto;
+    background-image: url(../images/columniz/img6.png);
+    background-repeat: repeat-y;
+}
+
+a.banner-nosotros
+{
+    background-image: url(../images/columnadere/images/banner-porquenosotros.jpg);
+    width: 184px;
+    height: 267px;
+    margin: auto;
+    display: block;
+}
+
+.imgder1
+{
+    background-image: url(../images/columnadere/images/img1.jpg);
+    height: 9px;
+    width: 184px;
+    margin: auto;
+}
+
+a.banner-soloaqui
+{
+    background-image: url(../images/columnadere/images/banner-soloaquilandrover.gif);
+    width: 184px;
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+
+.imgder2
+{
+    background-image: url(../images/columnadere/images/img2.jpg);
+    height: 12px;
+    width: 208px;
+    margin: auto;
+}
+
+a.bannercontacto
+{
+    background-image: url(../images/columnadere/images/banner-contacto.jpg);
+    height: 101px;
+    width: 184px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+}
+
+a.banneraccesorios
+{
+    background-image: url(../images/columnadere/images/banner-accesorios.jpg);
+    height: 101px;
+    width: 184px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+}
+
+#BoxNuevosProd
+{
+    width: 546px;
+    min-height: 1086px;
+    margin: auto;
+    margin-top: 15px;
+    color: #999;
+}
+
+#nuevoproductotit
+{
+    background-image: url(../images/infocentral/images/5.jpg);
+    height: 36px;
+    width: 546px;
+}
+
+.backfooterproduc
+{
+    background-image: url(../images/infocentral/images/7.jpg);
+    height: 16px;
+    width: 546px;
+}
+
+.boxnuevoproducInfo
+{
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    float: left;
+}
+
+    .boxnuevoproducInfo td
+    {
+        border: #000 1px solid;
+        font-size: 13px;
+    }
+
+.footerboxmenu
+{
+    width: 440px;
+    float: right;
+    margin-top: 15px;
+    height: 20px;
+}
+
+.linksfooterAmarillo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ffdc59;
+    margin-right: 7px;
+    margin-left: 7px;
+    text-decoration: none;
+}
+
+    .linksfooterAmarillo a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #ffdc59;
+        text-decoration: none;
+    }
+
+        .linksfooterAmarillo a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #FF9;
+        }
+
+.mainlevelMF
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFF;
+    margin-right: 7px;
+    margin-left: 7px;
+    text-decoration: none;
+}
+
+    .mainlevelMF a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+        .mainlevelMF a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #FFF;
+        }
+
+.cajamenufooter
+{
+    width: 700px;
+    height: 40px;
+    margin: auto;
+    padding-top: 50px;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.mainlevelFML
+{
+    color: #36ff00;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    .mainlevelFML a
+    {
+        color: #36ff00;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+        .mainlevelFML a:hover
+        {
+            color: #36ff00;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+.textblancopeq
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 10px;
+    letter-spacing: 3px;
+    padding-top: 15px;
+}
+
+a.btncarrito
+{
+    background-image: url(../images/btnVerCart.png);
+    width: 150px;
+    height: 30px;
+    float: left;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.boxcarritotop
+{
+    width: 351px;
+    height: 42px;
+    float: left;
+}
+
+.boxmenutopverde
+{
+    width: 240px;
+    height: 25px;
+    padding-top: 11px;
+    float: left;
+}
+
+.mainlevel
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b703a;
+    font-size: 11px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+    .mainlevel a
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4b703a;
+        font-size: 11px;
+        text-decoration: none;
+    }
+
+        .mainlevel a:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #6F0;
+            font-size: 11px;
+        }
+
+#boxmenuprincipaltop
+{
+    width: 940px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 58px;
+}
+
+    #boxmenuprincipaltop a
+    {
+        width: 130px;
+        height: 58px;
+        color: #fff;
+        text-decoration: none;
+        background-image: url(../images/topMenuLine.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+    }
+
+        #boxmenuprincipaltop a:hover
+        {
+            color: #f4b400;
+            background-image: url(../images/backHover.png);
+            width: 150px;
+            height: 58px;
+            background-repeat: repeat-x;
+        }
+
+.mainlevelTopMenu
+{
+    color: #fff;
+    margin-top: -18px;
+    margin-left: -16px;
+}
+
+    .mainlevelTopMenu a
+    {
+        text-decoration: none;
+        font-family: Arial Narrow;
+        color: #FFF;
+        font-size: 13px;
+        background-image: url(../images/menu-back.jpg);
+        display: block;
+        width: 170px;
+        height: 56px;
+        float: left;
+        line-height: 56px;
+        text-align: center;
+    }
+
+        .mainlevelTopMenu a:hover
+        {
+            color: #f3c000;
+            font-size: 13px;
+            background-image: url(../images/menu-back-und.jpg);
+            display: block;
+        }
+
+#active_menuTopMenu
+{
+    text-decoration: none;
+    font-family: Arial Narrow;
+    color: #f3c000;
+    font-size: 13px;
+    background-image: url(../images/menu-back-und.jpg);
+    display: block;
+    width: 170px;
+    height: 56px;
+    float: left;
+    line-height: 56px;
+    text-align: center;
+}
+
+.texto-boxinfo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: auto;
+    width: 200px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.titulo-boxinfo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #390;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.texto-gris
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888888;
+    font-size: 12px;
+}
+
+.texto-verde-top
+{
+    color: #00f052;
+    font-size: 12px;
+    width: 90px;
+    display: block;
+}
+
+.texto-verde-top2
+{
+    color: #00f052;
+    font-size: 12px;
+    width: 140px;
+    display: block;
+}
+
+
+.login-caja
+{
+    float: left;
+    display: block;
+    text-align: right;
+}
+
+    .login-caja a
+    {
+        color: #00f052;
+        text-decoration: none;
+        display: block;
+        margin-left: 10px;
+        float: right;
+        margin-right: 15px;
+    }
+
+        .login-caja a:hover
+        {
+            text-decoration: underline;
+        }
+
+.scrollerBack
+{
+    background-image: url(../images/scrollerBack.png);
+    width: 184px;
+    height: 422px;
+    margin: auto;
+    text-align: center;
+}
+
+.newProds_Table
+{
+    background-color: #FFF;
+}
+
+    .newProds_Table H1
+    {
+        background-color: #060;
+        font-size: 18px;
+        color: #fff;
+        height: 25px;
+        margin: 0px;
+        line-height: 25px;
+        padding: 5px;
+    }
+
+.button
+{
+    background-image: url(../images/btnregister.png);
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    border: #005a12 1px solid;
+    text-indent: 20px;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.buttonOut
+{
+    background-color: #005b20;
+    color: #FFF;
+    width: 100px;
+    height: 50px;
+    margin-left: -40px;
+    margin-top: -15px;
+    font-size: 14px;
+    border: #fff 1px solid;
+}
+
+.account
+{
+    background-color: #FC0;
+    color: #FFF;
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+    margin-top: -15px;
+    font-size: 14px;
+    border: #005b20 1px solid;
+    list-style: none;
+    text-align: center;
+    margin-left: 150px;
+}
+
+    .account a
+    {
+        color: #000;
+        line-height: 50px;
+        text-decoration: none;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+.loginText
+{
+    text-align: right;
+    color: #FFF;
+    font-family: Verdana, Geneva, sans-serif;
+    padding-top: 10px;
+}
+
+
+
+/*PRECIOS*/
+
+.SamePrice
+{
+    color: #f3c600;
+    font-size: 16px;
+}
+
+.OldPrice
+{
+    text-decoration: line-through;
+    color: #F00;
+    font-size: 14px;
+}
+
+.NewPrice
+{
+    color: #f3c600;
+    font-size: 16px;
+}
+
+.Saving
+{
+    color: #999;
+    font-size: 14px;
+}
+
+.disponible
+{
+    font-size: 14px;
+    font-weight: bold;
+    text-indent: 5px;
+}
+
+#productList
+{
+    color: #FFF;
+}
+
+    #productList img
+    {
+        border: #21d960 1px solid;
+    }
+
+    #productList a
+    {
+        color: #21d960;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0px;
+    }
+
+        #productList a:hover
+        {
+            text-decoration: underline;
+        }
+
+.boxCategoriaproducInfo
+{
+    min-height: 1055px;
+}
+
+.boxNoProductos
+{
+    min-height: 1055px;
+    color: #FFF;
+    text-align: center;
+}
+
+.CatsTits
+{
+    color: #21d960;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+    text-indent: 5px;
+}
+
+.ftTit
+{
+    color: #21d960;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px;
+    width: 100%;
+    margin-left: 5px;
+    display: block;
+}
+
+.ftImg
+{
+    border: #21d960 1px solid;
+    text-align: center;
+    background-color: #fff;
+}
+
+.ftContent
+{
+    background-color: #FFF;
+    padding: 10px;
+    width: 650px;
+}
+
+.ftrAl
+{
+    text-align: right;
+    width: 100px;
+    display: block;
+}
+
+.btnCart
+{
+    background-image: url(../images/btncart.png);
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border: #005a12 1px solid;
+    text-indent: 20px;
+}
+
+.btnRegister
+{
+    background-image: url(../images/btnregister.png);
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border: #005a12 1px solid;
+    text-indent: 20px;
+    font-size: 14px;
+}
+
+.btnGen
+{
+    background-image: url(../images/btnGenerico.png);
+    width: 155px;
+    height: 30px;
+    padding: 5px;
+    border: #005a12 1px solid;
+    font-size: 12px;
+}
+
+.ImagesProducts
+{
+    width: 50px;
+    height: 75px;
+}
+
+.userWelc
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888888;
+    font-size: 12px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    margin-top: 40px;
+    margin-left: 170px;
+}
+
+#loginForm
+{
+    margin-top: 10px;
+}
+
+.cartTable
+{
+    margin-right: 10px;
+}
+
+.cartTotal
+{
+    font-size: 18px;
+    text-align: right;
+}
+
+.btnNext
+{
+    background-image: url(../images/btnNext.png);
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: #fff 1px solid;
+    font-size: 12px;
+    float: right;
+    color: #FFF;
+}
+
+.CarritoTR1
+{
+}
+
+.CarritoTR2
+{
+}
+
+.CarritoTD1
+{
+    background-color: #c1c1c1;
+    padding: 3px;
+    color: #666;
+}
+
+.CarritoTD2
+{
+    background-color: #E6E6E6;
+}
+
